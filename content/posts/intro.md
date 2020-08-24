@@ -24,8 +24,8 @@ Intro:
 
 Machine Walkthroughs:
 
-1. [Lame Walkthrough](https://github.com/s0merset7/HTBWalkthroughs/blob/master/HTB%20Lame%20Write-Up.md)
-2. [Jerry Walkthrough](https://github.com/s0merset7/HTBWalkthroughs/blob/master/HTB%20Jerry%20Write-Up.md)
+1. [Lame Walkthrough](/posts/lame_machine)
+2. [Jerry Walkthrough](/posts/jerry_machine)
 
 # Set Up
 I will be using Kali Linux and many of its tools to complete the machines. Unless you want to dual boot or reset the OS of your computer, I would recommend following [these instructions](https://www.nakivo.com/blog/how-to-install-kali-linux-on-virtualbox/) to set it up on your own device. (It's totally free and has plenty of documentation if you come across an issue that isn't in that link)

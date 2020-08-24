@@ -1,19 +1,20 @@
 ---
 title           : "Contact"
 description     : "See how to contact me."
-cover           : "javier-mazzeo-GTXvpZ2eTdA.jpg"
-coverAlt        : "Brown animal hanging on tree by Javier Mazzeo."
+cover           : "somerset.png"
+coverAlt        : "Profile Pic"
 sitemapExclude  : true
 ---
 
 That's actually me.
 
-You can also find me at:
+Feel free to reach out to me at:
 
 {{< social >}}
 
----
+<!-- ---
 
 Or drop me a good ol' email:
 
 {{< contact-form >}}
+-->
