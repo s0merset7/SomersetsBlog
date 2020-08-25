@@ -6,8 +6,6 @@ coverAlt        : "Profile Pic"
 sitemapExclude  : true
 ---
 
-That's actually me.
-
 Feel free to reach out to me at:
 
 {{< social >}}
