@@ -39,10 +39,10 @@ I will be using Kali Linux and many of its tools to complete the machines. Unles
 
 I will also be using many of the tools in Kali Linux to complete the boxes. I will make sure to mention any programs or software that I use in my write-ups. To find any of them in Kali Linux, go to the **Applications** tab on the top left of the window and there will be a dropdown of all of the tools and programs it offers
 
-For [Hack the Box](https://www.hackthebox.eu/), you will need to subscribe as a VIP member (its about $13 a month) and with it you will have access to all the retired boxes as well as a bunch of other features I'm still exploring. After signing up, it was a bit confusing for me to set up the VPN to be able to access the challeneges, so [this website](https://steemit.com/ethicalhacking/@rahul516/how-to-connect-to-hack-the-box-vpn) will show you how to set up the VPN to access the challenges (you'll have to figure out how to get an invite code yourself ;) )
+For [Hack the Box](https://www.hackthebox.eu/), you will need to subscribe as a VIP member (its about $13 a month) and with it you will have access to all the retired boxes as well as a bunch of other features I'm still exploring. After signing up, it was a bit confusing for me to set up the VPN to be able to access the challenges, so [this website](https://steemit.com/ethicalhacking/@rahul516/how-to-connect-to-hack-the-box-vpn) will show you how to set up the VPN to access the challenges (you'll have to figure out how to get an invite code yourself ;) )
 
 # DISCLAIMER
-As I've said, I am a beginner, and as such there is a very good chance I will explain things wrong or take a longer roundabout way than is neccessary. As I learn more I will do my best to go back and edit any past mistakes. If you catch anything or have a better method, feel free to [contact](/contact) me and let me know!
+As I've said, I am a beginner, and as such there is a very good chance I will explain things wrong or take a longer roundabout way than is necessary. As I learn more, I will do my best to go back and edit any past mistakes. If you catch anything or have a better method, feel free to [contact](/contact) me and let me know!
 
 
 ###### <font size="1"> Rm9yIHRoZSBrZXkgdG8gdGhlIG90aGVycywgZmluZCB0aGUgbWVhbmluZyBvZiBteSBuYW1l</font> 
