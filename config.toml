@@ -13,6 +13,15 @@ paginate = 5
 
 [markup]
   [markup.goldmark]
+    [markup.goldmark.extentions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+
     [markup.goldmark.renderer]
       unsafe = true
 
@@ -29,7 +38,7 @@ paginate = 5
 
   # Author
   author      = "Somerset"
-  authorDesc  = "Some indescribable horror."
+  authorDesc  = "Cybersecuirty enthusiast learning what I can"
 
   # Site cover, for Open Graph, Twitter Cards and Schema.org
   # It will be used if the current page doesn't have a image cover
@@ -103,7 +112,7 @@ paginate = 5
     maxLength = 42  # Default is 32
 
     # Optional placeholder for search field
-    placeholder = "ie.: Type what you're looking for"
+    placeholder = "Type what you're looking for"
 
 
   [params.style]
@@ -119,12 +128,12 @@ paginate = 5
 
     # Accent colors for light and dark mode respectively
     lightAccent  = "#225670" # Default is "#225670"
-    darkAccent   = "#dd587c" # Default is "#dd587c"
+    darkAccent   = "#902b37" # Default is "#dd587c"
 
     # More colors, pick as many as you want (not really sure if there's a limit)
     # Apparently these may not show up on every modern browser (ie. Firefox)
     # There's no default value. Used here just as example
-    presets = [ "#1f676b", "#f3a530", "#902b37", "#1dbc91", "#754e85", "#7fc121", "#a8314a", "#ff7433", "#3e6728", "#c063bd" ]
+    presets = [ "#1f676b", "#f3a530", "#dd587c", "#1dbc91", "#754e85", "#7fc121", "#a8314a", "#ff7433", "#3e6728", "#c063bd" ]
 
     # Use an icon or text for footnote return links
     # The default is false

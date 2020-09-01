@@ -11,30 +11,37 @@ tags: [ "HacktheBox",
 ]
 draft: false
 ---
+<style>
+	main {
+    margin: 90px auto;
+    padding: 0 15px;
+    max-width: 70%;
+	}
+</style>
 
-1.	In a new terminal window, run `nmap -sV -O -F --version-light 10.10.10.3`
+1. In a new terminal window, run `nmap -sV -O -F --version-light 10.10.10.3`
 ![Image](https://user-images.githubusercontent.com/44144070/89726880-9b4c8980-d9d4-11ea-9c66-4269c021413f.png)
-	* Another option is to open **Zenmap** and run a port scan on the same IP (to see just the information on the ports, you can go to the **Ports/Hosts** tab)
-        * **Zenmap** is a program that does a really good job at visualizing and breaking down `nmap` commands into digestible bites
+<br><div style="padding-left: 2em;">[ ] Another option is to open **Zenmap** and run a port scan on the same IP (to see just the information on the ports, you can go to the **Ports/Hosts** tab)
+<br><div style="padding-left: 2em;">[ ] **Zenmap** is a program that does a really good job at visualizing and breaking down `nmap` commands into digestible bites</div>
     ![Image](https://user-images.githubusercontent.com/44144070/89726888-b7502b00-d9d4-11ea-9a64-1e5bd559f122.png)
     ![Image](https://user-images.githubusercontent.com/44144070/89726889-b8815800-d9d4-11ea-8bab-4a7be888eae5.png)
-    * Now there a a LOT of different ways to use `nmap`, and being that I'm still learning you are going to be seeing a lot of different versions, but I will do my best to explain what each version does. The two versions used here I got from other tutorials and show different levels of detail when port scanning.
-        * The first version we used was `nmap -sV -O -F --version-light 10.10.10.3`
-            * `-sV`: Probes open ports to determine service/version info
-            * `-O`: Enable OS detection
-            * `-F`: Fast mode, scans fewer ports than the default scan
-            * `--version-light`: Limit to most likely probes
-        - The second version used (as seen in the **Zenmap** screenshot) was `nmap -A -v 10.10.10.3`
-            - `-A`: Enable OS detection, version detection, script scanning, and traceroute
-            - `-v`: Increase verbosity level (how detailed the process and results are)
+    </div>
+2. Now there a a LOT of different ways to use `nmap`, and being that I'm still learning you are going to be seeing a lot of different versions, but I will do my best to explain what each version does. The two versions used here I got from other tutorials and show different levels of detail when port scanning.
+<br><div style="padding-left: 2em;">[ ] The first version we used was `nmap -sV -O -F --version-light 10.10.10.3`
+<br><div style="padding-left: 2em;">[ ] `-sV`: Probes open ports to determine service/version info
+<br>[ ]`-O`: Enable OS detection
+<br>[ ]`-F`: Fast mode, scans fewer ports than the default scan
+<br>[ ]`--version-light`: Limit to most likely probes </div>
+<br>[ ]The second version used (as seen in the **Zenmap** <br><div style="padding-left: 2em;">[ ] `-A`: Enable OS detection, version detection, script scanning, and traceroute
+<br>[ ]`-v`: Increase verbosity level (how detailed the process and results are)</div> </div>
 2.	You’ll find that there are 4 available ports with different services running on them (21, 22, 139, 445)
 3.	Port 21 shows **vsftpd 2.3.4**, let’s check if there are any known vulnerabilities
 4.	Run command `searchsploit vsftpd 2.3.4`
-	- What this does is search for any [Common Vulnerability and Exploits (CVE)](https://cve.mitre.org/about/index.html) and returns the name and location of the exploit in Kali
+<br><div style="padding-left: 2em;">[ ] What this does is search for any [Common Vulnerability and Exploits (CVE)](https://cve.mitre.org/about/index.html) and returns the name and location of the exploit in Kali
     ![Image](https://user-images.githubusercontent.com/44144070/89726895-be773900-d9d4-11ea-8b21-a2ea0eb85645.png)
 5.	You'll see that there is one vulnerability, a *"Backdoor Command Execution"*
 6.	We can try and use this vulnerability with **Metasploit**
-	- **Metasploit** is a very nifty software that has a bunch of CVE exploits saved that can be run automatically
+<br><div style="padding-left: 2em;">[ ] **Metasploit** is a very nifty software that has a bunch of CVE exploits saved that can be run automatically
 7.	Open **Metasploit** and use the command `search vsftpd 2.3.4`
     ![Image](https://user-images.githubusercontent.com/44144070/89726896-bfa86600-d9d4-11ea-9c96-eed449fe639d.png)
 8.	You'll see 4 different options, and the fourth one will be our *"Backdoor Command Execution"* exploit
@@ -43,7 +50,7 @@ draft: false
     ![Image](https://user-images.githubusercontent.com/44144070/89726897-c040fc80-d9d4-11ea-8180-bbc1cf91524f.png)
 11.	Do `set rhost 10.10.10.3`
 12.	If we do `show options` again, then we'll see its set and can type `run`
-	- What this does is tell **Metalsploit** where to direct the exploit
+<br><div style="padding-left: 2em;">[ ] What this does is tell **Metalsploit** where to direct the exploit
     ![Image](https://user-images.githubusercontent.com/44144070/89726898-c0d99300-d9d4-11ea-85af-1a4a549e7948.png)
 13.	After a little bit, we'll get a message saying, *“Exploit completed, but no session was created”*,    meaning that the exploit was attempted but didn’t' work (if we do some [research](https://www.exploit-db.com/exploits/17491), it turns out that this exploit had since been fixed which is why our attempt failed)
     ![Image](https://user-images.githubusercontent.com/44144070/89726899-c1722980-d9d4-11ea-95b4-e9fb64ffb433.png)
@@ -64,11 +71,10 @@ draft: false
 23.	You should see some new messages and after a few seconds one that says, *“Command shell session 1 opened”*, and we're in!
     ![Image](https://user-images.githubusercontent.com/44144070/89726905-c33bed00-d9d4-11ea-8fbf-1b58f3e2a092.png)
 24.	Now that we have a shell, we can check what kind of privileges we have with `whoami`
-
     ![Image](https://user-images.githubusercontent.com/44144070/89726906-c3d48380-d9d4-11ea-90be-560bf8e6e84f.png)
 25.	Turns out we are already in as the root user! Now all we need to do is find the password hashes under user.txt and root.txt
 26.	From here we have the option of either digging around in all the files and directories for what we want, or we can use this command `find / -type f -name “nameOfFile”` where nameOfFile will be replaced with user.txt and root.txt
-	- This command will return the file address of whatever file you put in place of *"nameOfFile"*. We know what to search for because HTB machines often store the user and root hashes in files named user.txt and root.txt
+<br><div style="padding-left: 2em;">[ ] This command will return the file address of whatever file you put in place of *"nameOfFile"*. We know what to search for because HTB machines often store the user and root hashes in files named user.txt and root.txt
     ![Image](https://user-images.githubusercontent.com/44144070/89726907-c3d48380-d9d4-11ea-9444-af9a860827a4.png)
 27.	Once we find the locations of the two files, we can just run `cat fileAddress` where fileAddress is what we got with the find command
 28.	Take those hashes and submit them on your HTB account and get the points!

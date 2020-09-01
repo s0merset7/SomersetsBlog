@@ -9,6 +9,13 @@ toc: false
 tags: ["HacktheBox"]
 draft: false
 ---
+<style>
+	main {
+    margin: 90px auto;
+    padding: 0 15px;
+    max-width: 70%;
+	}
+</style>
 
 Hello and welcome to my walkthroughs for Hack the Box (HTB). I've challenged myself with completing 50 HTB machines over the course of 6 months to learn hacking tools and skills that will prepare me for a career in the field. Being that I am very much a beginner at the time of writing this, I won't be able to solve any machine without guidance at first, so my plan is as follows:
 
