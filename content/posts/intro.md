@@ -17,7 +17,7 @@ draft: false
 	}
 </style>
 
-Hello, welcome to my walkthroughs for Hack the Box (HTB). I've challenged myself with completing 50 HTB machines to learn hacking tools and skills that will prepare me for a career in the field. Being that I am very much a beginner at the time of writing this, I won't be able to solve any machine without guidance at first, so my plan is as follows:
+Hello and welcome to my walkthroughs for Hack the Box (HTB). I've challenged myself with completing 50 HTB machines to learn hacking tools and skills that will prepare me for a career in the field. Being that I am very much a beginner at the time of writing this, I won't be able to solve any machine without guidance at first, so my plan is as follows:
 
 1. The first 10 machines I will do with the help of other write-ups and tutorials (I will attach links to any resources I use at the bottom of each of my walkthroughs). The goal here is to learn the basic tools and skills used in pentesting.
 2. The next 15 machines I will attempt to with as little help from other tutorials and write-ups. I will have them open and available but use them only as clues for what I should research to get to the next step. The goal here is to practice problem solving and methodology without direct guidance.
