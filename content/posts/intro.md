@@ -2,11 +2,11 @@
 title: "Hack the Box Walkthroughs Intro"
 description: ""
 date: 2020-08-23T23:34:33-07:00
-lastmod: 2020-08-23T23:34:33-07:00
+lastmod: 2021-05-14T20:54:00-07:00
 cover: ""
 coverAlt: ""
 toc: false
-tags: ["HacktheBox"]
+tags: ["HacktheBox", "Kali Linux Help"]
 draft: false
 ---
 <style>
@@ -37,7 +37,7 @@ Machine Walkthroughs:
 # Set Up
 I will be using Kali Linux and many of its tools to complete the machines. Unless you want to dual boot or reset the OS of your computer, I would recommend following [these instructions](https://www.nakivo.com/blog/how-to-install-kali-linux-on-virtualbox/) to set it up on your own device. (It's totally free and has plenty of documentation if you come across an issue that isn't in that link)
 
-I will also be using many of the tools in Kali Linux to complete the boxes. I will make sure to mention any programs or software that I use in my write-ups. To find any of them in Kali Linux, go to the **Applications** tab on the top left of the window and there will be a dropdown of all of the tools and programs it offers
+I will also be using many of the tools in Kali Linux to complete the boxes. I will make sure to mention any programs or software that I use in my write-ups. To find any of them in Kali Linux, go to the **Applications** tab on the top left of the window and there will be a dropdown of all of the tools and programs it offers. For some extra hep on setup and personalization of your Kali Linux machine, check out [this post](/posts/kali_setup)
 
 For [Hack the Box](https://www.hackthebox.eu/), you will need to subscribe as a VIP member (its about $13 a month) and with it you will have access to all the retired boxes as well as a bunch of other features I'm still exploring. After signing up, it was a bit confusing for me to set up the VPN to be able to access the challenges, so [this website](https://steemit.com/ethicalhacking/@rahul516/how-to-connect-to-hack-the-box-vpn) will show you how to set up the VPN to access the challenges (you'll have to figure out how to get an invite code yourself ;) )
 
