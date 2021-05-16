@@ -85,4 +85,4 @@ dpkg-reconfigure openssh-server
 ## Sources
 * [Kali Linux Documentation](https://www.kali.org/docs/)
 * [Gus Khawaja's Blog](https://ethicalhackingblog.com/)
-* [Gus's Pluralsight Course](https://www.pluralsight.com/courses/kali-linux-penetration-testing-ethical-hacking)
+* [Gus's Pluralsight Course: “Pentration Testing and Ethical Hacking with Kali Linux”](https://www.pluralsight.com/courses/kali-linux-penetration-testing-ethical-hacking)
