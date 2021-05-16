@@ -58,8 +58,9 @@ There are MANY tools that come preinstalled with your Kali Linux OS, however, th
 7. **Figlet** `apt-get install figlet`
     <br><div style="padding-left: 2em;">[ ] Tool to customize your terminal console by adding an ascii design of a given word/phrase to the top of you terminal when opened
     <br>[ ] https://www.npmjs.com/package/figlet
-    <br>[ ] To use the tool, open the .bashrc file in the home directory of your user (or .zshrc file depending on if your system uses Bash or Zsh) in the text editor of your choice. Scroll to the very bottom of the file and type `figlet yourMessageHere`. Close out of all terminal instances and when you reopen you should see your message at the top!</div>
-    ![Figlet Screenshot](../Images/kali_setup1.png)
+    <br>[ ] To use the tool, open the .bashrc file in the home directory of your user (or .zshrc file depending on if your system uses Bash or Zsh) in the text editor of your choice. Scroll to the very bottom of the file and type `figlet yourMessageHere`. Close out of all terminal instances and when you reopen you should see your message at the top!
+        ![Figlet Screenshot](kali_setup1.png)
+    </div>
 
 ## Configuring SSH
 1. Kali Linux comes with default SSH key pairs, however it is generally safer to disable the default keys and make a new key pair for security's sake
