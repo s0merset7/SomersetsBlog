@@ -20,10 +20,9 @@ draft: false
 *Note: Much of the below information is summarized from [Gus Khawaja's](https://ethicalhackingblog.com/about/) Pluralsight course "Pentration Testing and Ethical Hacking with Kali Linux". Much credit goes to Gus's expertise! Check out his blog in the sources and how to get started with Pluralsight*
 
 There are two main ways in which you can set up Kali Linux, you can either create a Virtual Machine (VM) and install the Kali Operating System (OS), or you can Single/Dual Boot your computer to have Kali (both of which are 100% free). While both options may seem a bit daunting to newcomers, there are plenty of great tutorials available online:
-
-<br><div style="padding-left: 2em;">[ ] VM Option: https://www.nakivo.com/blog/how-to-install-kali-linux-on-virtualbox/
-<br>[ ] Single Boot Option: https://www.kali.org/docs/installation/hard-disk-install/
-<br>[ ] Dual Boot Option: https://www.kali.org/docs/installation/ (click on one of the three "Dual Booting" links that correspond to your current OS)</div>
+<br><div style="padding-left: 2em;">[ ] VM Option: https://www.nakivo.com/blog/how-to-install-kali-linux-on-virtualbox/</div>
+<br><div style="padding-left: 2em;">[ ] Single Boot Option: https://www.kali.org/docs/installation/hard-disk-install/</div>
+<br><div style="padding-left: 2em;">[ ] Dual Boot Option: https://www.kali.org/docs/installation/ (click on one of the three "Dual Booting" links that correspond to your current OS)</div>
 
 # What to do Once You've Installed Kali
 ## Updating Kali Linux
@@ -31,7 +30,6 @@ There are two main ways in which you can set up Kali Linux, you can either creat
 ```
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 ```
-
 <br><div style="padding-left: 2em;">[ ] What this does is first retrieve any new updates to existing systems, follows through with upgrading them, and then upgrades the distributions along with all packets and their dependencies
     <br><div style="padding-left: 2em;">[ ] The `-y` flag automatically answers *yes* to any pop up questions to save time</div> </div>
 
@@ -71,7 +69,6 @@ mkdir keys_backup_ssh
 mv ssh_host_* keys_backup_ssh
 dpkg-reconfigure openssh-server
 ```
-
 <br><div style="padding-left: 2em;">[ ] What this code does is first navigate to where the ssh keys exist on your computer, then creates a directory where we will store the current key pairs just as a backup. Then we move all items in the current directory who's name starts with "ssh_host" to the newly made backup directory. Finally, we run the last command that generates new keys for us</div>
 
 ## Using TOR
