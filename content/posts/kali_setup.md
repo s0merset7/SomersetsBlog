@@ -20,9 +20,9 @@ draft: false
 *Note: Much of the below information is summarized from [Gus Khawaja's](https://ethicalhackingblog.com/about/) Pluralsight course "Pentration Testing and Ethical Hacking with Kali Linux". Much credit goes to Gus's expertise! Check out his blog in the sources and how to get started with Pluralsight*
 
 There are two main ways in which you can set up Kali Linux, you can either create a Virtual Machine (VM) and install the Kali Operating System (OS), or you can Single/Dual Boot your computer to have Kali (both of which are 100% free). While both options may seem a bit daunting to newcomers, there are plenty of great tutorials available online:
-<br><div style="padding-left: 2em;">[ ] VM Option: https://www.nakivo.com/blog/how-to-install-kali-linux-on-virtualbox/</div>
-<br><div style="padding-left: 2em;">[ ] Single Boot Option: https://www.kali.org/docs/installation/hard-disk-install/</div>
-<br><div style="padding-left: 2em;">[ ] Dual Boot Option: https://www.kali.org/docs/installation/ (click on one of the three "Dual Booting" links that correspond to your current OS)</div>
+* *VM Option: https://www.nakivo.com/blog/how-to-install-kali-linux-on-virtualbox/
+* Single Boot Option: https://www.kali.org/docs/installation/hard-disk-install/
+* Dual Boot Option: https://www.kali.org/docs/installation/ (click on one of the three "Dual Booting" links that correspond to your current OS)
 
 # What to do Once You've Installed Kali
 ## Updating Kali Linux
