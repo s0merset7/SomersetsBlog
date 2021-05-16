@@ -31,7 +31,7 @@ There are two main ways in which you can set up Kali Linux, you can either creat
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 ```
 <br><div style="padding-left: 2em;">[ ] What this does is first retrieve any new updates to existing systems, follows through with upgrading them, and then upgrades the distributions along with all packets and their dependencies
-    <br><div style="padding-left: 2em;">[ ] The `-y` flag automatically answers *yes* to any pop up questions to save time</div> </div>
+    <div style="padding-left: 2em;">[ ] The `-y` flag automatically answers *yes* to any pop up questions to save time</div> </div>
 
 2. Copy paste the above code into a `.sh` file and give the script executable permissions by running `chmod +x file.sh` in the terminal, where `file.sh` is the name of the file you created
 3. Simply `cd` to where you stored your file and run `./file.sh` to update your system. Don't forget to update often!
@@ -39,8 +39,8 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 ## Useful Tools
 There are MANY tools that come preinstalled with your Kali Linux OS, however, there are plenty of tools that can be very helpful to include on your system. Listed below are a couple tools, followed by the terminal command needed to install the tool (these commands assume you are acting as root user. If you get an error message saying you do not have permissions, add `sudo` to the beginning of the command and enter your password with the prompt). Feel free to check out the corresponding links for more information on the usage of each tool:
 1. **Preload** `apt-get install preload`
-    <br><div style="padding-left: 2em;">[ ] Automatically identifies a users most commonly used applications and preloads binaries and dependencies into memory to provide faster access
-    <br>[ ] https://www.linux.com/training-tutorials/using-preload-speed-linux/</div>
+    <br><div style="padding-left: 2em;">[ ] Automatically identifies a users most commonly used applications and preloads binaries and dependencies into memory to provide faster access</div>
+    <div style="padding-left: 4em;">[ ] https://www.linux.com/training-tutorials/using-preload-speed-linux/</div>
 2. **BleachBit** `apt-get install bleachbit`
     <br><div style="padding-left: 2em;">[ ] Frees disk space and improves privacy by freeing the cache, deleting cookies, cleaning internet history, shredding temporary files, deleting logs, and discarding other unnecessary files. Advanced features include shredding files to prevent recovery, and wiping free disk space to hide traces of files than have not been fully deleted
     <br>[ ] https://www.bleachbit.org/</div>
