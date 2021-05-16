@@ -34,7 +34,7 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
     * The `-y` flag automatically answers *yes* to any pop up questions to save time
 <ol start ="2">
 <li>Copy paste the above code into a `.sh` file and give the script executable permissions by running `chmod +x file.sh` in the terminal, where `file.sh` is the name of the file you created</li>
-<li>Simply `cd` to where you stored your file and run `./file.sh` to update your system. Don't forget to update often!</li>
+<li>Simply `cd` to where you stored your file and run `./file.sh` to update your system. Don't forget to update often!</li></ol>
 
 ## Useful Tools
 There are MANY tools that come preinstalled with your Kali Linux OS, however, there are plenty of tools that can be very helpful to include on your system. Listed below are a couple tools, followed by the terminal command needed to install the tool (these commands assume you are acting as root user. If you get an error message saying you do not have permissions, add `sudo` to the beginning of the command and enter your password with the prompt). Feel free to check out the corresponding links for more information on the usage of each tool:
