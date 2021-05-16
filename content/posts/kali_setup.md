@@ -30,8 +30,8 @@ There are two main ways in which you can set up Kali Linux, you can either creat
 ```
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 ```
-* What this does is first retrieve any new updates to existing systems, follows through with upgrading them, and then upgrades the distributions along with all packets and their dependencies
-    * The `-y` flag automatically answers *yes* to any pop up questions to save time
+    * What this does is first retrieve any new updates to existing systems, follows through with upgrading them, and then upgrades the distributions along with all packets and their dependencies
+        * The `-y` flag automatically answers *yes* to any pop up questions to save time
 
 2. Copy paste the above code into a `.sh` file and give the script executable permissions by running `chmod +x file.sh` in the terminal, where `file.sh` is the name of the file you created
 3. Simply `cd` to where you stored your file and run `./file.sh` to update your system. Don't forget to update often!
@@ -69,7 +69,7 @@ mkdir keys_backup_ssh
 mv ssh_host_* keys_backup_ssh
 dpkg-reconfigure openssh-server
 ```
-* What this code does is first navigate to where the ssh keys exist on your computer, then creates a directory where we will store the current key pairs just as a backup. Then we move all items in the current directory who's name starts with "ssh_host" to the newly made backup directory. Finally, we run the last command that generates new keys for us</div>
+* What this code does is first navigate to where the ssh keys exist on your computer, then creates a directory where we will store the current key pairs just as a backup. Then we move all items in the current directory who's name starts with "ssh_host" to the newly made backup directory. Finally, we run the last command that generates new keys for us
 
 ## Using TOR
 1. To use [The Onion Router](https://www.torproject.org/), we first need to install the TOR package by running `apt-get install tor`
