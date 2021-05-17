@@ -2,7 +2,7 @@
 title: "Kali Linux Setup and Customization"
 description: ""
 date: 2021-05-14T20:34:33-07:00
-lastmod: 2021-05-14T20:54:00-07:00
+lastmod: 2021-05-16T20:54:00-07:00
 cover: ""
 coverAlt: ""
 toc: false
