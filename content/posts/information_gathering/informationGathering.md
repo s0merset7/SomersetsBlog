@@ -52,9 +52,9 @@ In this post, I will be demonstrating some of the tools and processes used durin
     <br><div style="padding-left: 2em;">[ ] Example: `whois exampleSite.com` - will return all information that can be found about exampleSite.com followed by a long list of where that information was retrieved from </div>
     ![Whois Example](../whoisExampleSS.png)
 6. **DNS Reconnaissance**: identifying who owns a particular domain or series of IP addresses
-    * **Fierce**: Tool that will run tests on given domains to attempt to find IP addresses, subdomains, hosts, and other sensitive information about a given domain
-        * `--domain domainName` - specifies the domain to run the tests on
-        * Example: `fierce --domain exampleSite.com` - will return all information that can be found from running tests on exampleSite.com
+* **Fierce**: Tool that will run tests on given domains to attempt to find IP addresses, subdomains, hosts, and other sensitive information about a given domain
+    * `--domain domainName` - specifies the domain to run the tests on
+    * Example: `fierce --domain exampleSite.com` - will return all information that can be found from running tests on exampleSite.com
 7. **Deepmagic Information Gathering Tool (Dmitry)**: command line program written in C with the goal of finding out information about a host. This tool is especially useful for its speed by removing the need to enter multiple commands when searching through information different sources. For simplicity's sake, I included all of the testing flags in the example below, for specifics on each flag, run `dmitry -h`. The general idea is that this command runs many of the previous tests in addition to some new ones all at once and will save the results in a text file
     <br><div style="padding-left: 2em;">[ ] Example: `dmitry -winsepfbo s0merset7.github.io` - will perform every test (including whois lookups, search for subdomains and email addresses, TCP port scans, and more). Here is an example of the first few results found in the text file created after the program is run: </div>
     ![Dmitry Example](../dmitrySS.png)
