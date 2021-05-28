@@ -32,16 +32,15 @@ In this post, I will be demonstrating some of the tools and processes used durin
     <br> [ ] **info:** *[string]* - searches for information that google stores about the website itself
     <br> [ ] **intitle:** *[string]* - searches for pages that contain the *string* in the title
     <br> [ ] **inurl:** *[string]* - displays pages with the *string* in the URL
-    <br> [ ] **site:** *[string]* - displays pages for a specific site or domain with the *string*
-    </div>
-* To learn more about Google Dorks, many examples can be found here: https://www.exploit-db.com/google-hacking-database
+    <br> [ ] **site:** *[string]* - displays pages for a specific site or domain with the *string* </div>
+To learn more about Google Dorks, many examples can be found here: https://www.exploit-db.com/google-hacking-database
 3. **Document Metadata**: the information that is appended to documents so that an application can manage them during their creation and storage (ex: application owner, date/time of creation/modification, network location, geolocation)
-* **Metagoofil**: Tool that performs a google search to identify and download a target's website documents, extracting usernames, software versions, server names, and workstation names. The ultimate goal here as a pentester is to make sure there are no results from tools like this on your client's site. Here are some of the common flags:
-    * `-d domainName` - specifies the domain name
-    * `-t fileType` - specifies the file type you are searching for
-    * `-o localDirectory` - specifies the working directory where we want to save our results
-    * `-f` - indicates that you want the results to be saved as a txt file in provided directory (will be named "html_links_timestamp.txt")
-    * Example: `metagoofil -d exampleSite.com -t pdf -o temp -f` - uses google to search exampleSite.com for any pdfs and saves the results in a the temp directory
+<br><div style="padding-left: 0em;">[ ] **Metagoofil**: Tool that performs a google search to identify and download a target's website documents, extracting usernames, software versions, server names, and workstation names. The ultimate goal here as a pentester is to make sure there are no results from tools like this on your client's site. Here are some of the common flags:
+    <br><div style="padding-left: 2em;">[ ] `-d domainName` - specifies the domain name
+    <br> [ ] `-t fileType` - specifies the file type you are searching for
+    <br> [ ] `-o localDirectory` - specifies the working directory where we want to save our results
+    <br> [ ] `-f` - indicates that you want the results to be saved as a txt file in provided directory (will be named "html_links_timestamp.txt")
+    <br> [ ] Example: `metagoofil -d exampleSite.com -t pdf -o temp -f` - uses google to search exampleSite.com for any pdfs and saves the results in a the temp directory</div></div>
 4. **TheHarvester**: python script that searches through popular search engines and other sites for email addresses, hosts, and sub domains
     <br><div style="padding-left: 2em;">[ ] `-d domainName` - identifies the domain to be searched
     <br> [ ] `-b searchEngine` - identifies the tool that will be used to extract the information (ex: Google, Bing, etc.). Can also just put `all` to specify all options
@@ -52,9 +51,9 @@ In this post, I will be demonstrating some of the tools and processes used durin
     <br><div style="padding-left: 2em;">[ ] Example: `whois exampleSite.com` - will return all information that can be found about exampleSite.com followed by a long list of where that information was retrieved from </div>
     ![Whois Example](../whoisExampleSS.png)
 6. **DNS Reconnaissance**: identifying who owns a particular domain or series of IP addresses
-* **Fierce**: Tool that will run tests on given domains to attempt to find IP addresses, subdomains, hosts, and other sensitive information about a given domain
-    * `--domain domainName` - specifies the domain to run the tests on
-    * Example: `fierce --domain exampleSite.com` - will return all information that can be found from running tests on exampleSite.com
+    <br><div style="padding-left: 2em;">[ ] **Fierce**: Tool that will run tests on given domains to attempt to find IP addresses, subdomains, hosts, and other sensitive information about a given domain
+        <br><div style="padding-left: 2em;">[ ] `--domain domainName` - specifies the domain to run the tests on
+        <br> [ ]Example: `fierce --domain exampleSite.com` - will return all information that can be found from running tests on exampleSite.com </div></div>
 7. **Deepmagic Information Gathering Tool (Dmitry)**: command line program written in C with the goal of finding out information about a host. This tool is especially useful for its speed by removing the need to enter multiple commands when searching through information different sources. For simplicity's sake, I included all of the testing flags in the example below, for specifics on each flag, run `dmitry -h`. The general idea is that this command runs many of the previous tests in addition to some new ones all at once and will save the results in a text file
     <br><div style="padding-left: 2em;">[ ] Example: `dmitry -winsepfbo s0merset7.github.io` - will perform every test (including whois lookups, search for subdomains and email addresses, TCP port scans, and more). Here is an example of the first few results found in the text file created after the program is run: </div>
     ![Dmitry Example](../dmitrySS.png)
@@ -85,7 +84,7 @@ In this post, I will be demonstrating some of the tools and processes used durin
     8. Once the SOURCE (the domain) is set, we can run the test by typing `run`
     9. If you wanted to run another test module, you can type the same command `modules load moduleName` from inside the current module, or use `back` to first exit the module, search for a new one, and then use the `modules load` command
     10. Since I'm using github to host my site, the test found almost every host on its wordlist to be a match. Normally this will not be the case. To see all of the matches, run `show hosts` and it will display a table with the hosts, along with IP Addresses, Region, Country, and more. We can run other modules to fill in the missing values
-    ![Host List](,,.reconSS6.png)
+    ![Host List](../reconSS6.png)
     Some other modules we can use to fill in the missing information are:
     <br><div style="padding-left: 2em;">[ ] `brute_hosts` - module that we used, will compare domain to a word list and also try and find corresponding IPs
     <br> [ ] `hosts-hosts/resolve` - will try and update IPs to found hosts
