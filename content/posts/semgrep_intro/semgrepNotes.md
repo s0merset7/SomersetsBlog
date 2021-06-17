@@ -72,29 +72,29 @@ To get a good introduction on these two operators, check out [this site](https:/
 To test some of the functionalities of Semgrep, visit [this site](https://semgrep.dev/editor) to play with the Semgrep Playground and follow along with the demos below:
 
 Taking a look at the image below we can see the Semgrep Playground User Interface. The basic layout will have the top left dropdown allowing you to choose your language, the Rule Bar to enter your rule, the Test Code block to see the code that the rule will be tested on and any results from the query will show up on the right hand side
-![Semgrep Playground Layout](semgrepSS1.png)
+![Semgrep Playground Layout](../semgrepSS1.png)
 
 **Identifying a Function Call**
 [Click Here](https://semgrep.dev/s/clintgibler:python-exec-try) to follow along with this example:
 1. `exec(...)` will find all instances of the function `exec()` in your code. But it is smart, as you can see in the image below, the query will IGNORE comments and string literals while also IDENTIFYING the function even with varying syntax and aliases of the function call like `safe_function`
-![Semgrep ... Example](semgrepSS2.png)
+![Semgrep ... Example](../semgrepSS2.png)
 
 **Cross Site Scripting (XSS)**
 Following [this example](https://semgrep.dev/s/clintgibler:js-express-xss-try), we can see the code is vulnerable to a XSS attack as the user inputted query is not being filtered for any potentially malicious input.
 1. The benefit of Semgrep is we can search for whatever we want in out chosen language. So to start making a rule, we can just copy the source code and then begin to abstract it
 2. Let's replace `/foo` with `...`, as we want to search for anytime a general string is used regardless of its value
 3. We can add an `$` in front of an all caps name to represent a Metavariable. In this case, we can replace `name` in `req.query.name` with `$PARAM` to represent an unknown parameter
-    - Similarly we can replace the variable `resp` with `$VAR` to represent an unknown variable being passed
+    <br><div style="padding-left: 2em;">[ ] Similarly we can replace the variable `resp` with `$VAR` to represent an unknown variable being passed</div>
 4. This brings us to the rule of:
-```
-app.get('...', function (req, res) {
-    var $VAR = req.query.$PARAM;
-    
-    res.write($VAR);
-});
-```
-Which we can see, correctly identifies one of our XSS vulnerabilities, but not both
-![XSS Rule V1](semgrepSS3.png)
+    ```
+    app.get('...', function (req, res) {
+        var $VAR = req.query.$PARAM;
+        
+        res.write($VAR);
+    });
+    ```
+    Which we can see, correctly identifies one of our XSS vulnerabilities, but not both
+    ![XSS Rule V1](../semgrepSS3.png)
 5. We can see that the main differences between the two are the extra lines of code, and the extra arguments in functions. To take care of that, we can add some strategic ellipsis and arrows:
 ```
 app.get('...', function (req, res) {
@@ -103,7 +103,7 @@ app.get('...', function (req, res) {
     res.write(<... $VAR ...>);
 });
 ```
-![XSS Rule V2](semgrepSS4.png)
+![XSS Rule V2](../semgrepSS4.png)
 
 **Business Logic**
 Business Logic is when the code itself seems fine, but how the code works is fundamentally wrong (such as the order in which methods are called). Lets take a look at [this example](https://semgrep.dev/s/LNX)
@@ -111,32 +111,31 @@ Business Logic is when the code itself seems fine, but how the code works is fun
 2. We don't care about the return type, so lets replace `void` with `$RETTYPE` as our Metavariable
 3. The function type and arguments don't matter either so we can replace `base_ok` with `$FUNC` and `Transaction t` with `...`
 4. The main thing we are looking at here is the `make_transaction()` function, so we can add ellipsis above and below that statement as well as replacing the function's argument leaving us with this:
-```
-public $RETTYPE $FUNC(...) {
-  ...
-    make_transaction(...);
-  ...
-}
-```
-If we run that, we get this result which locates everything that use the `make_transaction()` function
-![Business Logic V1](semgrepSS5.png)
-6. This is good but doesn't actually check if they business logic is right, we need to add a conditional by clicking the plus button to the right of the rule block
-7. We can see a dropdown of options, here we want **and is not**, and then copy the top rule into the bottom box
-8. Above the `make_transaction()` line in our new rule section, lets add an elipsis followed by `verify_transaction(...);`. What this does is make sure the verify function is never called prior to the make transaction function in any place the make transaction function exists, as we only want the transaction to be verified if it first has been made
-```
-public $RETTYPE $FUNC(...) {
-  ...
-    verify_transaction(...);
-  ...
-    make_transaction(...);
-  ...
-}
-```
-When we run, we can see that it works and returns every time the verify transaction function is called before the make transaction function, with one exception
-![Business Logic V2](semgrepSS6.png)
-
-9. In the very last method of the sample code, we see that it should be flagged as a vulnerability as the transaction that is verified is not the same one that is made
-10. To fix this, we can replace the function ellipses in the **and is not** rule with a Metavariable `$T`
+    ```
+    public $RETTYPE $FUNC(...) {
+    ...
+        make_transaction(...);
+    ...
+    }
+    ```
+    If we run that, we get this result which locates everything that use the `make_transaction()` function
+    ![Business Logic V1](../semgrepSS5.png)
+5. This is good but doesn't actually check if they business logic is right, we need to add a conditional by clicking the plus button to the right of the rule block
+6. We can see a dropdown of options, here we want **and is not**, and then copy the top rule into the bottom box
+7. Above the `make_transaction()` line in our new rule section, lets add an elipsis followed by `verify_transaction(...);`. What this does is make sure the verify function is never called prior to the make transaction function in any place the make transaction function exists, as we only want the transaction to be verified if it first has been made
+    ```
+    public $RETTYPE $FUNC(...) {
+    ...
+        verify_transaction(...);
+    ...
+        make_transaction(...);
+    ...
+    }
+    ```
+    When we run, we can see that it works and returns every time the verify transaction function is called before the make transaction function, with one exception
+    ![Business Logic V2](../semgrepSS6.png)
+8. In the very last method of the sample code, we see that it should be flagged as a vulnerability as the transaction that is verified is not the same one that is made
+9. To fix this, we can replace the function ellipses in the **and is not** rule with a Metavariable `$T`
 ```
 public $RETTYPE $FUNC(...) {
   ...
@@ -147,7 +146,7 @@ public $RETTYPE $FUNC(...) {
 }
 ```
 And when we run this version we see it is able to catch all of the exceptions:
-![Business Logic V3](semgrepSS7.png)
+![Business Logic V3](../semgrepSS7.png)
 
 ### Advanced
 What we were looking at before is the Semgrep UI, but as we make more complex rules it is easier to do so using Semgrep's natural syntax language, YAML
