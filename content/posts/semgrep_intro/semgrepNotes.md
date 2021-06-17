@@ -96,6 +96,7 @@ Following [this example](https://semgrep.dev/s/clintgibler:js-express-xss-try), 
     Which we can see, correctly identifies one of our XSS vulnerabilities, but not both
     ![XSS Rule V1](../semgrepSS3.png)
 5. We can see that the main differences between the two are the extra lines of code, and the extra arguments in functions. To take care of that, we can add some strategic ellipsis and arrows:
+    <br><div style="padding-left: 2em;">[ ] What these arrow brackets are doing is saying that we know our Metavariable exists somewhere in the expression, but we don't know exactly where it is
 ```
 app.get('...', function (req, res) {
     var $VAR = req.query.$PARAM;
