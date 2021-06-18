@@ -165,10 +165,10 @@ rules:
 To break this down:
 - `id` - the name of the rule, this should be alphanumeric with dashes replacing spaces
 - `patterns` - this is where your specific rules are, more information below but make sure to have proper syntax
-- `message` - (optional) this is the message that will be displayed when something is flagged. Often it is meant to help developers by providing context to what needs to be changed
+- `message` - this is the message that will be displayed when something is flagged. Often it is meant to help developers by providing context to what needs to be changed
     - Note the pipeline (`|`) in YAML is used to have multiple lines be compiled into single lines
-- `language` - (optional) a place where you can put the language that this rule applies to
-- `severity` - (optional) how important the rule is, this is up to the user and can be on whatever scale they deem useful
+- `language` - a place where you can put the language that this rule applies to
+- `severity` - what kind of issue this code is, it can be either `INFO`, `WARNING`, or `ERROR`
 
 **Advanced Patterns**
 There are five pattern commands that can be used in combination of one another. They are very similar to boolean expressions. Here is a brief description of each one followed by an example:
