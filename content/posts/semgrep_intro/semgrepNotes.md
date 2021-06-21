@@ -2,7 +2,7 @@
 title: "Introduction to Semgrep"
 description: ""
 date: 2021-06-16T15:13:52-07:00
-lastmod: 2021-06-16T15:13:52-07:00
+lastmod: 2021-06-21T16:05:52-07:00
 cover: ""
 coverAlt: ""
 toc: false
@@ -23,7 +23,9 @@ The goal of this post is to give an introduction into how to create rules using 
 - [What is Semgrep](#what-is-semgrep)
 - [Semgrep Basics](#the-basics)
 - [Introductory Examples](#basic-examples)
-- [Coding Rules in Semgrep](#advanced)
+- [Coding Rules in Semgrep](#coding-in-yaml)
+- [Running Semgrep in the Commandline](#running-locally)
+- [Advanced Semgrep](#advanced)
 
 ### What is Semgrep
 "Semgrep is a customizable, lightweight, static analysis tool for finding bugs/enforcing code standards designed for security consultants and hackers"
@@ -74,12 +76,12 @@ To test some of the functionalities of Semgrep, visit [this site](https://semgre
 Taking a look at the image below we can see the Semgrep Playground User Interface. The basic layout will have the top left dropdown allowing you to choose your language, the Rule Bar to enter your rule, the Test Code block to see the code that the rule will be tested on and any results from the query will show up on the right hand side
 ![Semgrep Playground Layout](../semgrepSS1.png)
 
-**Identifying a Function Call**
+#### **Identifying a Function Call**
 [Click Here](https://semgrep.dev/s/clintgibler:python-exec-try) to follow along with this example:
 1. `exec(...)` will find all instances of the function `exec()` in your code. But it is smart, as you can see in the image below, the query will IGNORE comments and string literals while also IDENTIFYING the function even with varying syntax and aliases of the function call like `safe_function`
 ![Semgrep ... Example](../semgrepSS2.png)
 
-**Cross Site Scripting (XSS)**
+#### **Cross Site Scripting (XSS)**
 Following [this example](https://semgrep.dev/s/clintgibler:js-express-xss-try), we can see the code is vulnerable to a XSS attack as the user inputted query is not being filtered for any potentially malicious input.
 1. The benefit of Semgrep is we can search for whatever we want in out chosen language. So to start making a rule, we can just copy the source code and then begin to abstract it
 2. Let's replace `/foo` with `...`, as we want to search for anytime a general string is used regardless of its value
@@ -106,7 +108,7 @@ app.get('...', function (req, res) {
 ```
 ![XSS Rule V2](../semgrepSS4.png)
 
-**Business Logic**
+#### **Business Logic**
 Business Logic is when the code itself seems fine, but how the code works is fundamentally wrong (such as the order in which methods are called). Lets take a look at [this example](https://semgrep.dev/s/LNX)
 1. Sometimes we have a need for conditionals in our rules, for example if we want to check for the order of, or presence of certain items. To start off, lets copy the first method (lines 9-13)
 2. We don't care about the return type, so lets replace `void` with `$RETTYPE` as our Metavariable
@@ -149,7 +151,7 @@ public $RETTYPE $FUNC(...) {
 And when we run this version we see it is able to catch all of the exceptions:
 ![Business Logic V3](../semgrepSS7.png)
 
-### Advanced
+### Coding in YAML
 What we were looking at before is the Semgrep UI, but as we make more complex rules it is easier to do so using Semgrep's natural syntax language, YAML
 You can read up on the specifics of YAML [here]((https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)), but the main outline of a Semgrep command is as follows:
 ```
@@ -170,8 +172,8 @@ To break this down:
 - `language` - a place where you can put the language that this rule applies to
 - `severity` - what kind of issue this code is, it can be either `INFO`, `WARNING`, or `ERROR`
 
-**Advanced Patterns**
-There are five pattern commands that can be used in combination of one another. They are very similar to boolean expressions. Here is a brief description of each one followed by an example:
+#### **Coded Patterns**
+There are five main pattern commands that can be used in combination with one another. They are very similar to boolean expressions. Here is a brief description of each one followed by an example:
 - `pattern` = search for "this" AND "that"
 ```
 rules:
@@ -223,22 +225,94 @@ rules:
 ```
 This rule will find all instances of `print()`, but then narrow down those results to only `print()` calls that occur BEFORE an `if()` statement
 
-**Metavariable Regex**
-In addition to the previous patterns, there is an option for Metavariables that will only match variables whose names fit a specified regular expression. To use them, follow this format:
+### Running Locally
+#### **Installing**
+1. Run `brew install semgrep` to install semgrep locally on a Mac (you must have [Homebrew](https://brew.sh/) already installed)
+    <br><div style="padding-left: 2em;">[ ] For more details on installation on both Macs and other devices, [look here](https://semgrep.dev/docs/getting-started/)</div>
+
+#### **Environment**
+As Semgrep is now installed locally, you will be able to use `semgrep` as a command. Make sure that before running the command, your YAML rule file is in your current directory, which should be in the same directory that contains the directory/file you want to test. The general format is as follows:
+
+`semgrep --config ruleFile.yml --timeout 0 /directoryToTest`
+- `--config ruleFile.yml` - this tells Semgrep which YAML rule file you want to use in your test
+- `--timeout 0` - while this flag is technically optional, what it is doing is giving the time in seconds for how long Semgrep will wait for a single rule to run before it times out. When set to 0, it will never timeout, without the flag, the default is set to 30 seconds
+- `/directoryToTest` - this is the directory (or file) that you wish to run your rule(s) against
+
+#### **Shared Rulesets**
+While we know we have the ability to create our own rules, Semgrep has over 1000 pre-existing rules that have been vetted by the company for precision. Accessing these rulesets is pretty simple:
+1. Find the ruleset you want to use [on the Semgrep explore page](https://semgrep.dev/explore)
+    <br><div style="padding-left: 2em;">[ ] Each ruleset will list all of it's rules along with examples of how they work if you wish to explore them more in depth</div>
+2. Once you've selected your ruleset, in the top right corner there will be a section titled "Test and Run Locally" with a command you can copy as seen below
+![Test and Run Locally Command](../semgrepSS8.png)
+3. With this command copied, we can add our `timeout 0 /directoryToTest` to the end and the ruleset will be run against the selected directory
+    <br><div style="padding-left: 2em;">[ ]  Example: `semgrep --config "p/r2c-security-audit" --timeout 0 /directoryToTest` - this will run the [r2c-security-audit](https://semgrep.dev/p/r2c-security-audit) ruleset on whatever directory you indicate</div>
+
+### Advanced
+While the instructions above will be able to guide you through ~80% of what you'll need to know for Semgrep, there are several other useful rule syntaxes that are good to know. I will provide a basic description of each of them followed by an example showing how to use it. For a more in-depth explanation of each rule, check out the [documentation](https://semgrep.dev/docs/writing-rules/rule-syntax/)
+
+#### **Regex Patterns**
+The five patterns we looked at before were all based on bitwise operators of the code. The following patterns are all based on bitwise operators of the regular expressions that can be found in the code, allowing for more specificity:
+- `pattern-regex` = searches for a compatible regular expression (works best for Python)
 ```
 rules:
-    - id: name-of-rule
+    - id: regex-pattern-example
         patterns:
-        - pattern: $VARIABLE_A
+        - pattern-inside: print(...)
+        - pattern-regex: \d
+```
+This rule will find all instances of `print()`, but then narrow down those results to only `print()` calls that include a decimal number in them
+- `pattern-not-regex` = will filter out compatible regular expressions (works best for Python)
+```
+rules:
+    - id: not-regex-pattern-example
+        patterns:
+        - pattern-inside: print(...)
+        - pattern-not-regex: \d
+```
+This rule will find all instances of `print()`, but then narrow down those results to only `print()` calls that DO NOT include a decimal number in them
+
+#### **Metavariable Rules**
+- `metavariable-regex` = this works similar to `pattern-regex`, but instead of matching any instance of the regex in the code, this will only match regex patterns found in a given Metavariable
+```
+rules:
+    - id: metavariable-regex-example
+        patterns:
+        - pattern: print($VAR)
         - metavariable-regex:
-            metavariable: '$VARIABLE_A'
-            regex: '.*(wordA|wordB|wordC).*'
+            metavariable: $VAR
+            regex: (hello|hi|welcome)
 ```
 To break this down:
 - `pattern` - like we defined above, can be any of the patterns/combination of that we've learned
-- `metavariabel-regex` - we type this to let YAML know we are about to provide a regex rule
+- `metavariable-regex` - we type this to let YAML know we are about to provide a regex rule
 - `metavariable` - this is where you specify which of your previously defined Metavariables you are going to be writing your regex rule for
-- `regex` - this is where you specify what expressions you want to match to the Metavariable you picked. Ie. you would only be returning instances where $VARIABLE_A includes "wordA", "wordB", OR "wordC"
+- `regex` - this is where you specify what expressions you want to match to the Metavariable you picked. In this case you would only be returning instances where $VAR includes "hello", "hi", OR "welcome" inside `print()` statements
+#   
+- `metavariable-pattern` = this rule works the same way as `metavariable-regex` but instead of searching for matching regular expressions, it searches for matching patterns using the five pattern rules from above
+```
+rules:
+    - id: metavariable-pattern-example
+        patterns:
+        - pattern: | 
+            if(<... $VAR ...>) {
+                $CALL
+            }
+        - metavariable-pattern:
+            metavariable: $CALL
+            pattern: print($VAR)
+```
+This rule will search for all `if()` statements where the Metavariable `$VAR` is used, then it will check what is being executed in the `if()` statement with the `$CALL` Metavariable and will return any instance where `$CALL` is `print($VAR)`
+- `metavariable-comparison` = this rule will take a provided Metavariable and use a Python comparison function to evaluate the Metavariable's numeric value
+```
+rules:
+    - id: metavariable-comparison-example
+        patterns:
+        - pattern: set_value($VAR)
+        - metavariable-pattern:
+            comparison: $VAR < 900
+            metavariable: $VAR
+```
+This rule will search for all calls of the `set_value()` function where the variable passed in is less than 900. This can be useful if a value must be greater/less than a certain number to avoid issues
 
 ## Sources
 - [Semgrep Official Site](https://semgrep.dev/)
