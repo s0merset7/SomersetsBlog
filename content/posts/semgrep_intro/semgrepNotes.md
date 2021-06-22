@@ -2,7 +2,7 @@
 title: "Introduction to Semgrep"
 description: ""
 date: 2021-06-16T15:13:52-07:00
-lastmod: 2021-06-21T16:05:52-07:00
+lastmod: 2021-06-22T16:06:52-07:00
 cover: ""
 coverAlt: ""
 toc: false
@@ -61,7 +61,8 @@ The goal of this post is to give an introduction into how to create rules using 
 - Match JSON
 - "Generic" mode to analyse code in languages not directly supported or any text
 - Autofix/suggest option to correct common mistakes
-- Software as a Service (SaaS) features when used on large scale (not open source)
+- Software as a Service (SaaS) option when used on large scale (not open source)
+    - Can interact with GitHub, Jira, Slack, and more
 
 ### The Basics
 There are two operators that add functionality to Semgrep on top of whatever programming language you choose to use:
@@ -251,7 +252,7 @@ While we know we have the ability to create our own rules, Semgrep has over 1000
 While the instructions above will be able to guide you through ~80% of what you'll need to know for Semgrep, there are several other useful rule syntaxes that are good to know. I will provide a basic description of each of them followed by an example showing how to use it. For a more in-depth explanation of each rule, check out the [documentation](https://semgrep.dev/docs/writing-rules/rule-syntax/)
 
 #### **Regex Patterns**
-The five patterns we looked at before were all based on bitwise operators of the code. The following patterns are all based on bitwise operators of the regular expressions that can be found in the code, allowing for more specificity:
+The five patterns we looked at before were all based on bitwise operators of the code. The following patterns are all based on bitwise operators of the regular expressions that can be found in the code, allowing for more specificity. While there are many different types of Regex syntax, Semgrep uses [Perl Compatible Regular Expressions(PCRE)](https://learnxinyminutes.com/docs/pcre/):
 - `pattern-regex` = searches for a compatible regular expression (works best for Python)
 ```
 rules:
@@ -321,3 +322,4 @@ This rule will search for all calls of the `set_value()` function where the vari
     - [Clint Gibler's Presentation Slides](https://go.r2c.dev/empire-hacking-semgrep)
 - [Semgrep Open Security Summit Presentation](https://www.youtube.com/watch?v=EIjoqwT53E4)
     - [Presentation Slides](https://bit.ly/2020OpenSecuritySummit)
+- [Perl Compatible Regular Expression Cheat Sheet](https://learnxinyminutes.com/docs/pcre/)
