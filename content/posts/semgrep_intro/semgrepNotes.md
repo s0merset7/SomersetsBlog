@@ -66,7 +66,7 @@ The goal of this post is to give an introduction into how to create rules using 
 
 ### The Basics
 There are two operators that add functionality to Semgrep on top of whatever programming language you choose to use:
-* **Ellipsis** `...` - the ellipsis operator finds all calls to execute with zero or more arguments regardless of what they are
+* **Ellipsis** `...` - the ellipsis operator is a filler for an unknown space with zero or more arguments regardless of what they are
 * **Metavariables** `$VARIABLE` - these are like capture groups, a fill in for a unknown variable you want to match prior to its a assignment of a value
 
 To get a good introduction on these two operators, check out [this site](https://semgrep.dev/learn) for a tutorial into Semgrep
