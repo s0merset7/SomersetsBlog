@@ -154,7 +154,7 @@ And when we run this version we see it is able to catch all of the exceptions:
 
 ### Coding in YAML
 What we were looking at before is the Semgrep UI, but as we make more complex rules it is easier to do so using Semgrep's natural syntax language, YAML
-You can read up on the specifics of YAML [here]((https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)), but the main outline of a Semgrep command is as follows:
+You can read up on the specifics of YAML [here](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html), but the main outline of a Semgrep command is as follows:
 ```
 rules:
     - id: name-of-rule
