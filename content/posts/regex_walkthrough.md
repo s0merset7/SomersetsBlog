@@ -2,7 +2,7 @@
 title: "Making Regex Rules in Semgrep"
 description: ""
 date: 2021-07-12T07:18:20-07:00
-lastmod: 2020-07-12T08:46:20-07:00
+lastmod: 2020-07-12T12:37:20-07:00
 cover: ""
 coverAlt: ""
 toc: false
@@ -102,18 +102,15 @@ rules:
 ```
 
 ## Summary
-1. Is there any part that won't change between iterations?
+1. **Is there any part that won't change between iterations?**
     <br><div style="padding-left: 2em;">[ ] You can copy the unchanged parts as is in your Semgrep pattern
-    <br>[ ] Special characters must be preceded by `\` </div>
-
-2. Is there any part that is very similar between iterations?
-    <br><div style="padding-left: 2em;">[ ] Precede a part with `(?i)` to ignore case
-    <br>[ ] Follow a character with `?` when it may OR may not be present </div>
-
-3. Is there something that is often different but in the same part?
-    <br><div style="padding-left: 2em;">[ ] Put different possibilities of a part in an OR parameter `[Char1|Char1|Char3]` </div>
-
-4. Is there a part that can include a range of potential characters?
+    <br>[ ] Special characters must be preceded by `\`
+2. **Is there any part that is very similar between iterations?**
+     <br><div style="padding-left: 2em;">[ ] Precede a part with `(?i)` to ignore case
+     <br>[ ] Follow a character with `?` when it may OR may not be present
+3. **Is there something that is often different but in the same part?**
+    <br><div style="padding-left: 2em;">[ ] Put different possibilities of a part in an OR parameter `[Char1|Char1|Char3]`
+4. **Is there a part that can include a range of potential characters?**
     <br><div style="padding-left: 2em;">[ ] For common broad catagories, you can use the following
         <br><div style="padding-left: 2em;">[ ] `\d` - digit character (0-9)
         <br>[ ] `\w` - word character (alphanumeric and underscores)
