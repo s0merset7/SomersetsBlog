@@ -124,7 +124,7 @@ rules:
     <br>[ ] to indicate a range of expected characters, append the pattern with a `{#,#}`</div>
 
     ## Sources
-    - [Regex Tutorial by Jonny Fox](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
-    - [Semgrep Regex Documentation](https://semgrep.dev/docs/writing-rules/rule-syntax/#pattern-regex)
-    - [Regex Playground](https://regex101.com/)
-    - [Perl Compatible Regular Expression Cheat Sheet](https://learnxinyminutes.com/docs/pcre/)
+    <br><div style="padding-left: 2em;">[ ] [Regex Tutorial by Jonny Fox](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+    <br><div style="padding-left: 2em;">[ ] [Semgrep Regex Documentation](https://semgrep.dev/docs/writing-rules/rule-syntax/#pattern-regex)
+    <br><div style="padding-left: 2em;">[ ] [Regex Playground](https://regex101.com/)
+    <br><div style="padding-left: 2em;">[ ] [Perl Compatible Regular Expression Cheat Sheet](https://learnxinyminutes.com/docs/pcre/)
