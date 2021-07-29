@@ -17,7 +17,7 @@ draft: false
 	}
 </style>
 
-The goal of this post is to give an introduction into how to create rules using Semgrep as well getting a broad overview of what the tool is. The structure here will be to first explore the tool, then go into exmples on how to use it with the User Interface(UI) to understand the logic, then finally go into how to actually code the rules on a more complex level.
+The goal of this post is to give an introduction into how to create rules using Semgrep as well as getting a broad overview of what the tool is. The structure here will be to first explore the tool, then go into examples on how to use it with the User Interface(UI) to understand the logic, then finally go into how to actually code the rules on a more complex level.
 
 ## Table of Contents
 - [What is Semgrep](#what-is-semgrep)
@@ -126,7 +126,7 @@ Business Logic is when the code itself seems fine, but how the code works is fun
     ![Business Logic V1](../semgrepSS5.png)
 5. This is good but doesn't actually check if they business logic is right, we need to add a conditional by clicking the plus button to the right of the rule block
 6. We can see a dropdown of options, here we want **and is not**, and then copy the top rule into the bottom box
-7. Above the `make_transaction()` line in our new rule section, lets add an elipsis followed by `verify_transaction(...);`. What this does is make sure the verify function is never called prior to the make transaction function in any place the make transaction function exists, as we only want the transaction to be verified if it first has been made
+7. Above the `make_transaction()` line in our new rule section, lets add an ellipsis followed by `verify_transaction(...);`. What this does is make sure the verify function is never called prior to the make transaction function in any place the make transaction function exists, as we only want the transaction to be verified if it first has been made
     ```
     public $RETTYPE $FUNC(...) {
     ...
