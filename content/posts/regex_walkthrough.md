@@ -2,7 +2,7 @@
 title: "Making Regex Rules in Semgrep"
 description: ""
 date: 2021-07-12T07:18:20-07:00
-lastmod: 2020-07-12T12:37:20-07:00
+lastmod: 2020-07-28T17:26:20-07:00
 cover: ""
 coverAlt: ""
 toc: false
@@ -123,8 +123,8 @@ rules:
         <br>[ ] can also use individual special characters</div>
     <br>[ ] to indicate a range of expected characters, append the pattern with a `{#,#}`</div>
 
-    ## Sources
-    <br><div style="padding-left: 2em;">[ ] [Regex Tutorial by Jonny Fox](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
-    <br><div style="padding-left: 2em;">[ ] [Semgrep Regex Documentation](https://semgrep.dev/docs/writing-rules/rule-syntax/#pattern-regex)
-    <br><div style="padding-left: 2em;">[ ] [Regex Playground](https://regex101.com/)
-    <br><div style="padding-left: 2em;">[ ] [Perl Compatible Regular Expression Cheat Sheet](https://learnxinyminutes.com/docs/pcre/)
+## Sources
+- [Regex Tutorial by Jonny Fox](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+- [Semgrep Regex Documentation](https://semgrep.dev/docs/writing-rules/rule-syntax/#pattern-regex)
+- [Regex Playground](https://regex101.com/)
+- [Perl Compatible Regular Expression Cheat Sheet](https://learnxinyminutes.com/docs/pcre/)
