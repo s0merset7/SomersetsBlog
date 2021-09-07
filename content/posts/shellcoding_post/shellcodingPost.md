@@ -81,3 +81,4 @@ The previous command will only create a program, not shellcode. To get the shell
 - [pwn.college Module 4 Lectures](https://pwn.college/modules/shellcode)
 - [pwn.college Module 4 Challenges](https://dojo.pwn.college/challenges/shellcode)
 - [pwn.college Class Twitch Streams](https://www.twitch.tv/pwncollege)
+- [Ryan A. Chapman Linux System Call Table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)

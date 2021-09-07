@@ -76,8 +76,10 @@ A full register is 64 bits long, however they can be accessed partially. The bel
 <br>[ ] only for functions with "many" arguments on other architectures</div>
 
 ## Resources:
+- [x86 Register Cheat Sheet](https://web.stanford.edu/class/cs107/resources/x86-64-reference.pdf)
 - [x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
 - [Tutorial to Write a Program in x86](https://cs.lmu.edu/~ray/notes/nasmtutorial/)
+- [Language X to x86 Converter](https://www.godbolt.org/)
 - [Ryan A. Chapman Linux System Call Table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
 
 ## Sources
