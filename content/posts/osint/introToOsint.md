@@ -44,7 +44,7 @@ Open Source Intelligence (OSINT) is a way of searching for information on only p
 Google Dork Query (or just a Google Dork) is a way of using Google's search features in an advanced way, allowing you to add parameters to specify your search results.
 
 The first way to narrow down your results is by adding a query to your search. Here is a table with all of the different types of Google queries along with examples on how to use them. Don't forget, you can have multiple queries in the same search to get even better results:
-![Google Query Cheat Sheet](../osint1.png)
+![Google Query Cheat Sheet](osint1.png)
 - The boolean operators (the last six entries in the table), can often be used the same way in other search engines and applications
 
 ### Date Range
