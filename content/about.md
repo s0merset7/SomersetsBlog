@@ -13,8 +13,10 @@ author = "Somerset"
 	}
 </style>
 
-Hello! I'm Somerset, a Computer Systems Engineering major at Arizona State University with a concentration in Cybersecurity. I am still getting my bearings in the field but I'm starting to take a liking to pentesting and more red team aspects. I learned a lot from my time at NaviSec [NaviSec](https://navisec.io/) as an intern where I learned about professional pentesting and vulnerability assessments. My mentor at NaviSec ([@pry0cc](https://twitter.com/pry0cc)) encouraged me to learn by doing retired [Hack the Box](https://www.hackthebox.eu/) machines which recently has been my main focus along with preparing for my new upcoming internship.
+Hello! I'm Somerset, a senior student at university studying cybersecurity. While I'm still getting my bearings in the field, I'm learning as much as I can with whatever I can get my hands on. I have a couple of internships under my belt where I have learned a lot about pentesting and vulnerability assessments.
 
-In my free time I enjoy movies, especially anything mystery thriller related (as you may have figured out with my name). I also leave the house occasionally to go hiking in the beautiful Phoenix area.
+As of now my interests lay in red team and OSINT fields but I hope to conyinue exploring all cybersecurity fields to find my true passion. 
+
+In my free time I enjoy movies (especially mystery thriller), hiking, camping, online cybersecurity challenges, and competing in CTFs.
 
 ![](https://npavliklaw.com/wp-content/uploads/2019/03/bigstock-Saguaro-Cactus-Grow-On-Pinnacl-251563729.jpg)
