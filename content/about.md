@@ -13,9 +13,9 @@ author = "Somerset"
 	}
 </style>
 
-Hello! I'm Somerset, a senior student at university studying cybersecurity. While I'm still getting my bearings in the field, I'm learning as much as I can with whatever I can get my hands on. I have a couple of internships under my belt where I have learned a lot about pentesting and vulnerability assessments.
+Hello! I'm s0merset7, a recent university graduate with a degree in cybersecurity. While I'm still getting my bearings in the field, I'm learning as much as I can with whatever I can get my hands on. I have a couple of internships under my belt where I have learned a lot about pentesting and vulnerability assessments and an upcoming full time position.
 
-As of now my interests lay in red team and OSINT fields but I hope to conyinue exploring all cybersecurity fields to find my true passion. 
+As of now my interests lay in the offensive security and OSINT fields but I hope to continue exploring all cybersecurity fields to find my true passion. 
 
 In my free time I enjoy movies (especially mystery thriller), hiking, camping, online cybersecurity challenges, and competing in CTFs.
 

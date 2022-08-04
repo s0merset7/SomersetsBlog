@@ -1,9 +1,9 @@
 baseURL = "https://s0merset7.github.io/"
 languageCode = "en"
-title = "Somerset's Blog"
+title = "s0merset7's Blog"
 #theme = "color-your-world"
 
-copyright = "Copyright © 2021\n All rights reserved"
+copyright = "Copyright © 2022\n All rights reserved"
 
 enableEmoji = true
 enableInlineShortcodes = true
