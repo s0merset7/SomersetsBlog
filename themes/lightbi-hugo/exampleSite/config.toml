@@ -1,7 +1,7 @@
-baseURL = "https://s0merset7.github.io/"
+baseURL = "https://lightbi-hugo-theme.netlify.app/"
 DefaultContentLanguage = "en"
 languageCode = "en-us"
-title = "s0merset7's Blog"
+title = "Lightbi"
 theme = "lightbi-hugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
@@ -12,13 +12,13 @@ pygmentsCodefencesGuessSyntax = true
 #pygmentOptions = "linenos=inline"
 #disqusShortname = "XXX"
 #googleAnalytics = "XXX"
-enableRobotsTXT = false
+enableRobotsTXT = true
 enableGitInfo = false
 Paginate = 6
 
 [Params] 
 mainSections = ["post","posts"]
-#dateFormat = "January 02 2021"
+dateFormat = "2 January 2023"
 comments = false
 readingTime = false
 wordCount = false
@@ -39,15 +39,15 @@ pagination = "10"
   filename = "sitemap.xml"
 
 [Author]
-  name = "s0merset7"
-  #website = "https://binovarghese.com/"
-  #email = "sample@gmail.com"
-  #facebook = "username"
-  #instagram = "username"
-  #youtube = "user/username" # or channel/channelname
-  twitter = "s0merset7"
-  linkedin = "ryan-dinnan"
-  github = "s0merset7"
+  name = "Bino Kochumol Varghese"
+  website = "https://binovarghese.com/"
+  email = "sample@gmail.com"
+  facebook = "username"
+  instagram = "username"
+  youtube = "user/username" # or channel/channelname
+  twitter = "username"
+  linkedin = "username"
+  github = "username"
   #gitlab = "username"
   #bitbucket = "username"
   #reddit = "username"
@@ -74,14 +74,24 @@ pagination = "10"
     weight = 1
 
 [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
+    name = "Notes"
+    url = "/notes/"
     weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/blog/"
+    weight = 3
+
+[[menu.main]]
+    name = "Collections"
+    url = "/collections/"
+    weight = 4
 
 [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 5
 
 
 
