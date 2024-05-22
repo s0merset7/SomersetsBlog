@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Cryptocurrency Investigations"
 date: 2023-08-21
-tags: ["Crypto"]
+tags: ["Crypto", "Certification"]
 image : "/posts/introToCrypto.png"
 Description: "Introduction to cryptocurrency investigations including what is crypto and how it works."
 ---

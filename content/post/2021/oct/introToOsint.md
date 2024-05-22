@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Open Source Intelligence (OSINT)"
 date: 2021-10-23
-tags: ["OSINT"]
+tags: ["OSINT", "Certification"]
 image : "/posts/introToOsint.webp"
 Description: "Introduction to the process of OSINT and common resources that can be used to assist in investigations."
 ---
@@ -10,22 +10,31 @@ Description: "Introduction to the process of OSINT and common resources that can
 Open Source Intelligence (OSINT) is a way of searching for information on only publicly available sources (open source). While this may seem to be the same way everyone searches for information, there are many tools and methodologies that can be used to enhance your research capabilities. This post will dive into a few of the basic ways in which you can improve your current skills and expose you to new resources to get you started on the path to OSINT.
 
 ## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [Advanced Google Searching](#advanced-google-searching)
-    - [Google Dorks](#google-dorks)
-    - [Date Ranges](#date-range)
-    - [Icon Searching](#icon-searching)
-    - [Adding and Limiting Displayed Results](#addinglimiting-displayed-results)
-    - [Cache Searching and Anonymity](#cache-searching-and-anonymity)
-    - [Event Searching](#event-searching)
+  - [Google Dorks](#google-dorks)
+  - [Date Range](#date-range)
+  - [Icon Searching](#icon-searching)
+  - [Adding/Limiting Displayed Results](#addinglimiting-displayed-results)
+  - [Cache Searching and Anonymity](#cache-searching-and-anonymity)
+  - [Event Searching](#event-searching)
 - [People Search Engines](#people-search-engines)
+  - [Webmii](#webmii)
+  - [PeekYou](#peekyou)
+  - [411.com](#411com)
+  - [ThatsThem](#thatsthem)
+  - [Zoominfo](#zoominfo)
+  - [Intelius](#intelius)
+  - [Whitepages.com.au](#whitepagescomau)
 - [Username Correlation](#username-correlation)
-    - [Finding Usernames](#finding-usernames)
-    - [Account Information Gathering](#account-information-gathering)
+  - [Finding Usernames](#finding-usernames)
+  - [Account Information Gathering](#account-information-gathering)
 - [Reverse Image Searching](#reverse-image-searching)
-    - [Image Text Translation](#image-text-translation)
+  - [Image Text Translation](#image-text-translation)
 - [Cross-Platform Social Media Network Analysis](#cross-platform-social-media-network-analysis)
-    - [Scraping Information](#scraping-information)
-    - [Visualization](#visualization)
+  - [Scraping Information](#scraping-information)
+  - [Visualization](#visualization)
+- [Sources](#sources)
 
 ## Advanced Google Searching
 ### Google Dorks
