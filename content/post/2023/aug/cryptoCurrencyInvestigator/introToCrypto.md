@@ -242,7 +242,7 @@ Cryptocurrency investigations are an essential part of modern day criminal inves
     5. The previous hash value of the preceding block
     6. The current hash value of the selected block
 
-![Blockchain Visualized](blockchain_visualization.jpg)
+![Blockchain Visualized](../blockchain_visualization.jpg)
 - **Blockchain Nodes**: computers/servers that have a current version of the blockchain and push new Bitcoin transactions to other nodes
     - Nodes are connected to one another, establishing a network that pushes data to the whole network ensuring all nodes contain the same updated information
         - Each node in the blockchain updates its own ledger (copy of the blockchain transactions) about every 10 minutes

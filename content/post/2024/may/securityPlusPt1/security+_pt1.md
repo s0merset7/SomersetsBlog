@@ -1,40 +1,45 @@
-# Attacks, Threats, and Vulnerabilities
+---
+title: "CompTIA Security+: Attacks, Threats, and Vulnerabilities"
+date: 2024-05-22
+tags: ["CompTIA", "Certification"]
+image : "/posts/Security+_pt1.webp"
+Description: "Part one of my notes for the CompTIA Security+ Certification covering Attacks, Threats, and Vulnerabilities."
+---
 *Note: Much of the below information is summarized from Christopher Rees' Security+ training course hosted on Pluralsight. Much credit goes to Chris' expertise! Check out his courses in the sources*
 
 CompTIA's Security+ certification is a cert that many receive at the beginning of their journey into cybersecurity to prove their competency of basic security principles. Having taken and passed the exam, I condensed all of my notes for easy reference and to allow anyone to use them to help study. The exam breaks down its curriculum into several sections, and this portion of my notes covers the "Attacks, Threats, and Vulnerabilities" content.
 Please keep in mind these are only my notes, and should not be used as the sole resource to study for the Security+ certification. Additionally, since taking the exam, a new version has been published (SYO-701), meaning some of the below content may be out of date/missing important details.
 
 ## Table of Contents
-- [Attacks, Threats, and Vulnerabilities](#attacks-threats-and-vulnerabilities)
-  - [Table of Contents](#table-of-contents)
-  - [Social Engineering](#social-engineering)
-    - [Definitions](#definitions)
-    - [Principles (Reasons for Effectiveness):](#principles-reasons-for-effectiveness)
-  - [Malware](#malware)
-    - [Definitions](#definitions-1)
-  - [Application Attacks](#application-attacks)
-    - [Definitions](#definitions-2)
-  - [Network Attacks](#network-attacks)
-    - [Definitions](#definitions-3)
-    - [Networking Protocols](#networking-protocols)
-  - [Threat Actors, Vectors, and Intelligence Sources](#threat-actors-vectors-and-intelligence-sources)
-    - [Definitions](#definitions-4)
-    - [Attack Vectors](#attack-vectors)
-  - [Vulnerabilities and Security Risks](#vulnerabilities-and-security-risks)
-    - [Definitions](#definitions-5)
-    - [Weak Configuration Considerations](#weak-configuration-considerations)
-    - [Impact Areas](#impact-areas)
-  - [Security Assessment Techniques](#security-assessment-techniques)
-    - [Definitions](#definitions-6)
-    - [Types of Threats](#types-of-threats)
-    - [Threat Intelligence Classifications](#threat-intelligence-classifications)
-    - [Stages of Risk Management](#stages-of-risk-management)
-    - [Risk Management Data Sources](#risk-management-data-sources)
-  - [Penetration Testing](#penetration-testing)
-    - [Definitions](#definitions-7)
-    - [Testing Environments](#testing-environments)
-    - [Security Teams](#security-teams)
-  - [Sources](#sources)
+- [Table of Contents](#table-of-contents)
+- [Social Engineering](#social-engineering)
+  - [Definitions](#definitions)
+  - [Principles (Reasons for Effectiveness):](#principles-reasons-for-effectiveness)
+- [Malware](#malware)
+  - [Definitions](#definitions-1)
+- [Application Attacks](#application-attacks)
+  - [Definitions](#definitions-2)
+- [Network Attacks](#network-attacks)
+  - [Definitions](#definitions-3)
+  - [Networking Protocols](#networking-protocols)
+- [Threat Actors, Vectors, and Intelligence Sources](#threat-actors-vectors-and-intelligence-sources)
+  - [Definitions](#definitions-4)
+  - [Attack Vectors](#attack-vectors)
+- [Vulnerabilities and Security Risks](#vulnerabilities-and-security-risks)
+  - [Definitions](#definitions-5)
+  - [Weak Configuration Considerations](#weak-configuration-considerations)
+  - [Impact Areas](#impact-areas)
+- [Security Assessment Techniques](#security-assessment-techniques)
+  - [Definitions](#definitions-6)
+  - [Types of Threats](#types-of-threats)
+  - [Threat Intelligence Classifications](#threat-intelligence-classifications)
+  - [Stages of Risk Management](#stages-of-risk-management)
+  - [Risk Management Data Sources](#risk-management-data-sources)
+- [Penetration Testing](#penetration-testing)
+  - [Definitions](#definitions-7)
+  - [Testing Environments](#testing-environments)
+  - [Security Teams](#security-teams)
+- [Sources](#sources)
 
 
 ## Social Engineering
@@ -170,7 +175,7 @@ Please keep in mind these are only my notes, and should not be used as the sole 
 - **Organized Crime**: hackers who are motivated by financial crime
 - **Nation States/Advanced Persistent Threats (APT)**: highly skilled hackers whose main goal is to penetrate government or commercial systems
 - **Insiders**: individuals who belong to a company/organization that chooses to defame/reveal information about said company often for financial gain
-![Types of Threat Actors](0.png)
+![Types of Threat Actors](../0.png)
 - **Indicators of Compromise (IOC)**: pieces of data (breadcrumbs) that can identify potential malicious activity
 - **Automated Indicator Sharing (AIS)**: free sharing service by the DHS to share indicators between the federal government /private sector at machine speed over STIX and TAXII specifications
 - **MITRE**: not-for-profit organizations that manages federal funding for research projects across multiple agencies (CVE/CWE databases)
