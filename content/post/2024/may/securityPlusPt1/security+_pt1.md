@@ -1,7 +1,7 @@
 ---
 title: "CompTIA Security+: Attacks, Threats, and Vulnerabilities"
 date: 2024-05-22
-tags: ["CompTIA", "Certification"]
+tags: ["CompTIA", "Certification", Security+]
 image : "/posts/Security+_pt1.webp"
 Description: "Part one of my notes for the CompTIA Security+ Certification covering Attacks, Threats, and Vulnerabilities."
 ---
