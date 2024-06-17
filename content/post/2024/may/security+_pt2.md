@@ -8,6 +8,7 @@ Description: "Part two of my notes for the CompTIA Security+ Certification cover
 *Note: Much of the below information is summarized from Christopher Rees' Security+ training course hosted on Pluralsight. Much credit goes to Chris' expertise! Check out his courses in the sources*
 
 Continuing with my notes from studying for the CompTIA Security+ exam. The exam breaks down its curriculum into several sections, and this portion of my notes covers the "Architecture and Design" content.
+
 Please keep in mind these are only my notes, and should not be used as the sole resource to study for the Security+ certification. Additionally, since taking the exam, a new version has been published, meaning some of the below content may be out of date/missing important details.
 
 - [Architecture and Design](#architecture-and-design)
