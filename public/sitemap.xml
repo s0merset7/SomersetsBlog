@@ -3,36 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/certification/</loc>
-    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/comptia/</loc>
-    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/post/2024/may/security&#43;_pt2/</loc>
-    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/post/2024/may/security&#43;_pt4/</loc>
+    <lastmod>2024-06-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/security&#43;/</loc>
-    <lastmod>2024-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-06-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-06-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/post/2024/may/securitypluspt3/security&#43;_pt3/</loc>
+    <lastmod>2024-06-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/post/2024/may/security&#43;_pt2/</loc>
     <lastmod>2024-06-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
